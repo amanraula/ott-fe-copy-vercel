@@ -16,15 +16,15 @@ const AuthScreen = () => {
 			{/* Navbar */}
 			<header className='max-w-6xl mx-auto flex items-center justify-between p-4 pb-10'>
 				<img src='/netflix-logo.png' alt='Netflix Logo' className='w-32 md:w-52' />
-				<Link to={"/login"} className='text-white bg-red-600 py-1 px-2 rounded'>
+				<Link to={"/login"} className='text-white bg-green-600 py-1 px-2 rounded'>
 					Sign In
 				</Link>
 			</header>
 
 			{/* hero section */}
 			<div className='flex flex-col items-center justify-center text-center py-40 text-white max-w-6xl mx-auto'>
-				<h1 className='text-4xl md:text-6xl font-bold mb-4'>Unlimited movies, TV shows, and more</h1>
-				<p className='text-lg mb-4'>Watch anywhere. Cancel anytime.</p>
+				<h1 className='text-4xl md:text-6xl font-bold mb-4'>The Universe of Movies, Shows <br/> & Originals Awaits</h1>
+				<p className='text-lg mb-4'><h2>FlexGest anywhere , anytime!</h2></p>
 				<p className='mb-4'>Ready to watch? Enter your email to create or restart your membership.</p>
 
 				<form className='flex flex-col md:flex-row gap-4 w-1/2' onSubmit={handleFormSubmit}>
@@ -35,7 +35,7 @@ const AuthScreen = () => {
 						value={email}
 						onChange={(e) => setEmail(e.target.value)}
 					/>
-					<button className='bg-red-600 text-xl lg:text-2xl px-2 lg:px-6 py-1 md:py-2 rounded flex justify-center items-center'>
+					<button className='bg-green-600 text-xl lg:text-2xl px-2 lg:px-6 py-1 md:py-2 rounded flex justify-center items-center'>
 						Get Started
 						<ChevronRight className='size-8 md:size-10' />
 					</button>
@@ -46,7 +46,7 @@ const AuthScreen = () => {
 			<div className='h-2 w-full bg-[#232323]' aria-hidden='true' />
 
 			{/* 1st section */}
-			<div className='py-10 bg-black text-white'>
+			<div className='py-10 bg-violet-950 text-white'>
 				<div className='flex max-w-6xl mx-auto items-center justify-center md:flex-row flex-col px-4 md:px-2'>
 					{/* left side */}
 					<div className='flex-1 text-center md:text-left'>
@@ -75,7 +75,7 @@ const AuthScreen = () => {
 			<div className='h-2 w-full bg-[#232323]' aria-hidden='true' />
 
 			{/* 2nd section */}
-			<div className='py-10 bg-black text-white'>
+			<div className='py-10 bg-indigo-900 text-white'>
 				<div className='flex max-w-6xl mx-auto items-center justify-center md:flex-row flex-col-reverse px-4 md:px-2'>
 					{/* left side */}
 					<div className='flex-1 relative'>
@@ -117,7 +117,7 @@ const AuthScreen = () => {
 			<div className='h-2 w-full bg-[#232323]' aria-hidden='true' />
 
 			{/* 3rd section */}
-			<div className='py-10 bg-black text-white'>
+			<div className='py-10 bg-violet-950 text-white'>
 				<div className='flex max-w-6xl mx-auto items-center justify-center md:flex-row flex-col px-4 md:px-2'>
 					{/* left side */}
 					<div className='flex-1 text-center md:text-left'>
@@ -148,7 +148,7 @@ const AuthScreen = () => {
 			<div className='h-2 w-full bg-[#232323]' aria-hidden='true' />
 
 			{/* 4th section*/}
-			<div className='py-10 bg-black text-white'>
+			<div className='py-10 bg-indigo-950 text-white'>
 				<div
 					className='flex max-w-6xl mx-auto items-center justify-center flex-col-reverse md:flex-row
            px-4 md:px-2
