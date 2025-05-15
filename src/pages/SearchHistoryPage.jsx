@@ -80,7 +80,7 @@ const SearchHistoryPage = () => {
 							<span
 								className={`py-1 px-3 min-w-20 text-center rounded-full text-sm  ml-auto ${
 									entry.searchType === "movie"
-										? "bg-red-600"
+										? "bg-violet-600"
 										: entry.searchType === "tv"
 										? "bg-blue-600"
 										: "bg-green-600"
@@ -89,7 +89,7 @@ const SearchHistoryPage = () => {
 								{entry.searchType[0].toUpperCase() + entry.searchType.slice(1)}
 							</span>
 							<Trash
-								className='size-5 ml-4 cursor-pointer hover:fill-red-600 hover:text-red-600'
+								className='size-5 ml-4 cursor-pointer hover:fill-red-600 hover:text-green-600'
 								onClick={() => handleDelete(entry)}
 							/>
 						</div>
