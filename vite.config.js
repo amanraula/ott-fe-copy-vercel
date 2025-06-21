@@ -7,7 +7,8 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: "https://ott-be.onrender.com",
+        // target: "https://ott-be.onrender.com",
+        target: "https://ott-backend-dc8y.onrender.com",
 		// target: "http://localhost:5000",
         changeOrigin: true,
         secure: false, // Disable SSL certificate verification

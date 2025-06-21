@@ -2,7 +2,7 @@
     "rewrites": [
       {
         "source": "/api/:path*",
-        "destination": "https://ott-be.onrender.com/api/:path*"
+        "destination": "https://ott-backend-dc8y.onrender.com/api/:path*"
       }
     ]
   }
