@@ -6,7 +6,7 @@ import HomePage from "./pages/home/HomePage";
 import Footer from "./components/Footer";
 import { Toaster } from "react-hot-toast";
 import { useAuthStore } from "./store/authUser";
-import { useEffect } from "react";
+import { lazy, Suspense,useEffect } from "react";
 import { Loader } from "lucide-react";
 // import SearchPage from "./pages/SearchPage";
 // import SearchHistoryPage from "./pages/SearchHistoryPage";
@@ -39,20 +39,20 @@ function App() {
 
 	return (
 		<>
-		 
+		 	<Suspense fallback={<div className='flex justify-center items-center h-screen'><Loader className='animate-spin text-green-600 size-10' /></div>}>
 			<Routes>
 				<Route path='/' element={<HomePage />} />
-			<Suspense fallback={<div className='flex justify-center items-center h-screen'><Loader className='animate-spin text-green-600 size-10' /></div>}>
+			
 				<Route path='/login' element={!user ? <LoginPage /> : <Navigate to={"/"} />} />
 				<Route path='/signup' element={!user ? <SignUpPage /> : <Navigate to={"/"} />} />
 				<Route path='/watch/:id' element={user ? <WatchPage /> : <Navigate to={"/login"} />} />
 				<Route path='/search' element={user ? <SearchPage /> : <Navigate to={"/login"} />} />
 				<Route path='/history' element={user ? <SearchHistoryPage /> : <Navigate to={"/login"} />} />
 				<Route path='/*' element={<NotFoundPage />} />
-			</Suspense>
+			
 			</Routes>
 			<Footer />
-
+			</Suspense>
 			<Toaster />
 		
 		</>
